@@ -18,14 +18,9 @@
                 mobileFallback = "https://youtube.com/watch?v=q7LZPObAGVM",
                 app = "vnd.youtube://q7LZPObAGVM";
 
-                if( /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
                     window.location = app;
-                    window.setTimeout(function() {
-                        window.location = mobileFallback;
-                    }, 25);
-                } else {
+                    window.location = mobileFallback;
                     window.location = desktopFallback;
-                }
             };
         </script>
     </body>
