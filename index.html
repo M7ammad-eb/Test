@@ -20,13 +20,15 @@
                 app = "youtube://fhCdVkEwRHA";
 
                 if( /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ) {
-                    Intent videoIntent = new Intent(Intent.ACTION_VIEW);
+                    setTimeout(function () { window.location = "market://details?id=com.google.android.youtube"; }, 25);
 
-videoIntent.setData(https://youtube.com/watch?v=fhCdVkEwRHA);
+    window.location = "vnd.youtube://www.youtube.com/watch?v=yourVideoId";
 
-videoIntent.setClassName("com.google.android.youtube", "com.google.android.youtube.WatchActivity");
 
-startActivity(videoIntent);
+
+
+
+
                     }, 25);
                 } else {
                     window.location = desktopFallback;
