@@ -13,10 +13,19 @@
     </head>
     <body>
         <script type="text/javascript">
-            Intent videoIntent = new Intent(Intent.ACTION_VIEW);
-            videoIntent.setData("https://youtube.com/watch?v=fhCdVkEwRHA");
-            videoIntent.setClassName("com.google.android.youtube", "com.google.android.youtube.WatchActivity");
-            startActivity(videoIntent);
+{
+
+     Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube://fhCdVkEwRHA"));
+     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+     startActivity(intent);
+
+} catch (ActivityNotFoundException e) {
+
+    // youtube is not installed.Will be opened in other available apps
+
+    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtube.com/watch?v=fhCdVkEwRHA"));
+    startActivity(i);
+}
         </script>
     </body>
 </html>
