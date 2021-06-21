@@ -13,9 +13,8 @@
     </head>
     <body>
         <script type="text/javascript">
-            var url = "https://youtube.com/watch?v=fhCdVkEwRHA";
             Intent videoIntent = new Intent(Intent.ACTION_VIEW);
-            videoIntent.setData(url);
+            videoIntent.setData("https://youtube.com/watch?v=fhCdVkEwRHA");
             videoIntent.setClassName("com.google.android.youtube", "com.google.android.youtube.WatchActivity");
             startActivity(videoIntent);
         </script>
